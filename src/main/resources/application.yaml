@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: secure-library
+  datasource:
+    platform: h2
+    url: jdbc:h2:mem:testDb
+    username: sa
+    password: root
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /db
+
+logging:
+  level:
+    web: WARN
+    root: INFO
+    com.ust.secure_library: DEBUG
+  pattern:
+    console: "%msg%n"
