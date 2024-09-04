@@ -18,7 +18,6 @@ public class LibraryService {
 
     // Methods for user registration, login, subscription, and issue retrieval
     public User register(User user) {
-        user.setPassword(encoder.encode(user.getPassword()));
         user.setSubscription(false);
         return userRepository.save(user);
     }
